@@ -1,0 +1,39 @@
+#navMain
+  #left
+    a(href='#path') Learning Path
+    a(href='#help') Homework Help
+    a(href='#practice') Practice Games
+    a(href='#quiz') Practice Test
+    a.active(href='#brag') My Brag Page
+  #right
+    #bar
+      h1 Hi Abel
+      a(href='#') Log Out
+      img(alt='Abe',src='/images/Abe.png')
+      a(href='#') Settings
+      a(href='#') Home
+    #dashBoard
+      .board#path       
+      .board#help
+      .board#practice
+      .board#quiz
+      .board.active#brag
+        #pointsWrapper
+          h1#points 2,717
+          #topPercent top 9% this month
+        #badgesWrapper
+          h1#badgesHeader 
+            span#badgesHeaderStatic Badges earned:
+            span#badgesEarned 2
+          #badges
+            - var badges = [ 'Multiplication basic facts', 'Division basic facts', 'Problem Solving', 'Rounding', 'Place Value','Add within 1,000', 'Subtract within 1,000', 'Multiply by multiplies of 10', 'Fractions','Measure capacity & mass','Tell Time','Area of Rectangles','Perimeter','Geometry Quadrilaterals' ]
+            - for( var i = 0; i < 2; i++ ) {
+              .badgeWrapper
+                .badge.active
+                .badgeText= badges[i]
+            - } for(; i < badges.length; i++ ) {
+              .badgeWrapper
+                .badge
+                .badgeText= badges[i]
+            - }
+      

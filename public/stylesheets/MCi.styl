@@ -1,0 +1,100 @@
+//Primary
+MCiPink = #E3004F
+MCiDarkGreen = #17D92E
+MCiDarkBlue = #2230D3
+MCiLightGreen = #73EC5A
+MCiLightBlue = #537BE3
+
+//Secondary
+MCiPurple = #3D0093
+MCiOrange = #FF5B00
+MCiYellow = #E0E43B
+MCiMediumGray = #666677
+MCiMediumGrey = MCiMediumGray
+MCiDarkGray = #33333D
+MCiDarkGrey = MCiDarkGray
+
+//Tertiary
+MCiPaleBlue = #C5DFFF
+MCiPaleGreen = #D1EEDC
+MCiPaleGray = #eee
+MCiPaleGrey = MCiPaleGray
+MCiLightGray = #9999AA
+MCiLightGrey = MCiLightGray
+MCiOffWhite = #F2F2F2
+MCiWhite = #FAFAFA
+
+//doodads
+buttony(color)
+  background-color color
+  gradient rgba(color,0.3) rgba(color,0.7)
+  box-shadow inset 0 0 8px 2px rgba(color, 0.8), 1px 1px rgba(color, 0.3)
+  cursor pointer
+  &:hover
+    gradient rgba(color,0.2) rgba(color,0.6)
+    box-shadow inset 0 0 5px 0 rgba(color, 0.7), 1px 1px rgba(color, 0.6)
+  &:active
+    gradient rgba(color,0.1) rgba(color,0.5)
+    box-shadow inset 0 0 5px 0 rgba(color, 0.6), 1px 1px rgba(color, 0.9)
+
+buttonyy(color)
+  background-color color
+  gradient rgba(color,0.7) rgba(color,0.9)
+  box-shadow inset 0 0 5px 0 rgba(color, 0.8)
+  cursor pointer
+  &:hover
+    gradient rgba(color,0.6) rgba(color,0.8)
+    box-shadow inset 0 0 5px 0 rgba(color, 0.7)
+  &:active
+    gradient rgba(color,0.5) rgba(color,0.7)
+    box-shadow inset 0 0 5px 0 rgba(color, 0.6)
+  
+//elements
+h1
+  font-size 1.3em
+
+h2
+  font-size 1.2em
+
+h3
+  font-size 1.1em
+
+a 
+  text-decoration none
+  cursor pointer
+  &:hover 
+    color MCiOrange
+    text-decoration underline
+
+button, input, select, textarea
+  border-radius 3px
+  cursor pointer
+
+button, input[type=submit]
+  gradient MCiLightBlue MCiDarkBlue
+  color MCiWhite
+  text-shadow 0 0 1px MCiDarkBlue
+  border 1px solid MCiDarkBlue
+  font-weight bold !important
+  box-shadow inset 0 0 2px 0 rgba(MCiDarkBlue, 0.8)
+  padding 3px
+  &:hover
+    gradient MCiPaleBlue MCiLightBlue
+    color MCiDarkGray
+    text-shadow 0 0 1px MCiWhite
+  &:active
+    gradient MCiOffWhite MCiPaleBlue
+    color MCiDarkGray
+    text-shadow 0 0 1px MCiWhite
+
+//sections
+body
+  margin 0
+  padding 0
+  background-color MCiPaleBlue
+  background-image url(/images/background_3transcircles.png)
+  background-repeat no-repeat
+  background-position -105px 0px
+  color MCiDarkGray
+  font-family 'Lato', Helvetica, Arial, sans-serif
+     

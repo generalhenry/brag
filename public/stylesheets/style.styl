@@ -1,0 +1,151 @@
+@import 'css3'
+@import 'Boiler'
+@import 'MCi'
+
+::-webkit-scrollbar
+  height 1.5ex
+  border-radius 1ex
+  background-color rgba(MCiLightBlue)
+::-webkit-scrollbar-thumb
+  background-color MCiPaleBlue
+  border-radius 1ex
+::-webkit-scrollbar-corner
+  display none
+  
+innerRadius = 30px
+#navMain
+  width 1000px
+  height 600px
+  background-color MCiLightGray
+  text-shadow 0 1px 0 MCiWhite
+  margin 25px auto
+  padding 10px
+  border-radius innerRadius + 5
+  -webkit-box-reflect below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(rgba(255, 255, 255, 0.3)))
+  &.disconnected
+    background-color rgba( MCiDarkGrey, 0.7 )
+  #left, #right
+    display inline-block
+    vertical-align top
+    height 100%
+  #left
+    width 160px
+    padding 0 10px
+    text-align center
+    background-color MCiWhite
+    display inline-block
+    border-radius innerRadius 0 0 innerRadius
+    border 10px solid MCiOrange
+    padding-top 100px
+    height 480px
+    a
+      display block
+      margin 20px 0
+      height 40px
+      line-height 40px
+      &:hover
+        text-decoration none
+        background-color rgba( MCiWhite, 0.5 );
+        border-radius 10px
+      &:active
+        background-color rgba( MCiWhite, 0.9 );
+      &.active
+        font-size 1.3em
+        color MCiOrange
+        font-weight bold
+      &.inactive
+        color MCiPaleGray
+  #right
+    width 800px
+    background-color MCiWhite
+    border-radius 0 innerRadius innerRadius 0
+    #bar
+      background-color MCiOrange
+      height 80px
+      line-height 80px
+      border-radius 0 innerRadius 0 0
+      color MCiWhite
+      text-shadow 0 0 1px MCiDarkGrey
+      h1, a, img
+        display inline-block
+        vertical-align middle
+      h1
+        margin-left 20px
+        font-size 2em
+      a, img
+        float right
+        color MCiWhite
+        padding 0 10px
+        margin 20px 0
+        height 40px
+        line-height 40px
+        font-weight bold
+        &:hover
+          text-decoration none
+          background-color rgba( MCiWhite, 0.95 )
+          box-shadow inset 0px 0px 5px MCiWhite
+          text-shadow 0 0 1px MCiWhite
+          border-radius 10px
+          color MCiOrange
+        &:active
+          background-color MCiWhite
+      img
+        height 65px
+        margin 5px 0
+        cursor pointer
+        border-radius 50px
+    #dashBoard
+      height 520px
+      overflow hidden
+      .board
+        height 520px
+        display none
+        overflow hidden
+        &.active
+          display block
+        &#brag
+          text-align center
+          #pointsWrapper
+            display inline-block
+            padding 20px
+            #points
+              color MCiOrange
+              font-size 7em
+              text-shadow 4px 3px 1px MCiDarkGrey
+            #topPercent
+              color MCiOrange
+              font-weight bold
+              text-shadow 1px 1px 0 MCiDarkGrey
+          #badgesWrapper
+            background-color MCiPaleBlue
+            padding 10px
+            box-shadow inset 0 0 20px MCiLightBlue
+            border-radius 0 0 innerRadius 0
+            height 305px
+            #badgesHeader
+              text-shadow 1px 1px 0px MCiDarkBlue
+              #badgesEarned
+                margin-left 10px
+            #badges
+              .badgeWrapper
+                display inline-block
+                width 100px
+                vertical-align top
+                .badge
+                  width 80px
+                  height 80px
+                  margin 5px
+                  border 5px solid MCiLightGrey
+                  background-color MCiOffWhite
+                  border-radius 50px
+                  &.active
+                    border 5px solid MCiOrange
+                    background-color MCiYellow
+                    background-image url('/images/Steff.png')
+                    background-size 100% 100%
+                .badgeText
+                  font-size 0.8em
+                &:nth-child(even)
+                  .badge.active
+                    background-color MCiDarkGreen
+              
