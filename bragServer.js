@@ -2,11 +2,11 @@
  * Module dependencies.
  */
 var express = require('express');
-var stylus = require('stylus');
+//var stylus = require('stylus');
 var fs = require('fs');
 var io = require('socket.io');
 
-var app = module.exports = express.createServer();
+var app = express.createServer();
 
 /**
 *  config
@@ -14,11 +14,11 @@ var app = module.exports = express.createServer();
 
 var PORT = 84;
 
-function compileMethod(str) {
+/*function compileMethod(str) {
   return stylus(str)
     .set('compress', true)
     .set('paths', [__dirname + '/public/stylesheets']);
-};
+};*/
 
 app.configure( function () {
   app.set('views', __dirname + '/views');
@@ -26,7 +26,7 @@ app.configure( function () {
   app.use(express.methodOverride());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-  app.use( stylus.middleware(__dirname + '/public') );
+  //app.use( stylus.middleware(__dirname + '/public') );
 });
 app.configure('development', function () {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
@@ -55,7 +55,7 @@ socket.on('connection', function(client){
   });
 }); 
 
-var style = __dirname + '/public/stylesheets/style.styl';
+/*var style = __dirname + '/public/stylesheets/style.styl';
 fs.watchFile(style, function (curr, prev) {
   refreshCSS( function (css) {
     socket.broadcast({update: 'style',contents:css});
@@ -73,3 +73,4 @@ function refreshCSS (mycallback) {
 }
 
 setTimeout(process.exit, 1 * 60 * 60 * 1000);
+*/
