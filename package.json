@@ -1,0 +1,26 @@
+{
+  "name": "brag",
+  "version": "0.0.0",
+  "description": "start with bragServer.js",
+  "main": "bragServer.js",
+  "dependencies": {
+    "express": "~2.4.2",
+    "jade": "~0.12.4",
+    "socket.io": "~0.8.7",
+    "mysql": "~0.9.1",
+    "stylus": "~0.13.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/generalhenry/brag.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/generalhenry/brag/issues"
+  }
+}
